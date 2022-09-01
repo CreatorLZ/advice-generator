@@ -3,9 +3,9 @@ import { motion } from 'framer-motion'
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
-const Container = styled(motion.div)`
+const Container = styled(motion.main)`
 background-color: hsl(218, 23%, 16%);
-width: 100wh;
+width: 100%;
 height:100vh;
 display: flex;
 align-items: center;
@@ -102,7 +102,7 @@ const Home = () => {
    >
         <Advicecard>
     <Advicenumber>
-  <pre>ADVICE    # {quoteNo}</pre>
+  ADVICE # {quoteNo}
     </Advicenumber>
     <Advicetext
     variants={quoteAnimate}>

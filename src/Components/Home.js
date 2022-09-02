@@ -127,7 +127,7 @@ const Home = () => {
     "{quote}"
     </Advicetext>
     
-    <img style={{marginTop:"40px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />
+    <img style={{marginTop:"40px",marginBottom:"30px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />
     <Dice style={{
     position:"absolute",
     bottom:"-25px",  

@@ -19,7 +19,7 @@ max-width:500px;
 min-width: 300px;
 min-height: 300px;
 max-height: 600px;
-border-radius: 10px;
+border-radius: 15px;
 display: flex;
 align-items: center;
 flex-direction: column;

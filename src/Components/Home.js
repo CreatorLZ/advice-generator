@@ -35,6 +35,8 @@ transition: all 1.5s ease-in-out;
 const Advicenumber = styled.span`
 margin-top: 50px;
 color: hsl(150, 100%, 66%);
+font-size: 12px;
+letter-spacing: 2px;
 `
 
 const Advicetext = styled(motion.h2)`

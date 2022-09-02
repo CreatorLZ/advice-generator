@@ -44,6 +44,7 @@ margin-top: 20px;
 font-size: 28px;
 color:  hsl(193, 38%, 86%);
 margin:20px;
+padding: 20px;
 `
 // const Hr = styled.hr`
 // width: 100%;

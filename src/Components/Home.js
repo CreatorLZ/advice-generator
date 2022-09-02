@@ -44,7 +44,7 @@ margin-top: 20px;
 font-size: 28px;
 color:  hsl(193, 38%, 86%);
 margin:20px;
-padding: 20px;
+
 `
 // const Hr = styled.hr`
 // width: 100%;
@@ -127,7 +127,7 @@ const Home = () => {
     "{quote}"
     </Advicetext>
     
-    <img style={{position:"absolute", bottom:"55px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />
+    <img style={{marginTop:"40px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />
     <Dice style={{
     position:"absolute",
     bottom:"-25px",  

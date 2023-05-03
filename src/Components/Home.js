@@ -71,10 +71,15 @@ const Home = () => {
     }
   },[])
 
-  useEffect(()=>{
-   
-    getAdvice();
-  })
+   useEffect(() => {
+    const intervalId = setInterval(() => {
+      getAdvice();
+    }, 3000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [getAdvice])
 
   const quoteAnimate = {
     offscreen:{ scale:1,opacity:0 },

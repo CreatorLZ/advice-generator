@@ -107,7 +107,7 @@ const Home = () => {
    >
         <Advicecard>
     <Advicenumber>
-  ADVICE #new {quoteNo}
+  ADVICE # {quoteNo}
     </Advicenumber>
     <Advicetext
     variants={quoteAnimate}>

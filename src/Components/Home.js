@@ -74,7 +74,7 @@ const Home = () => {
    useEffect(() => {
     const intervalId = setInterval(() => {
       getAdvice();
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearInterval(intervalId);
@@ -107,7 +107,7 @@ const Home = () => {
    >
         <Advicecard>
     <Advicenumber>
-  ADVICE # {quoteNo}
+  ADVICE #new {quoteNo}
     </Advicenumber>
     <Advicetext
     variants={quoteAnimate}>

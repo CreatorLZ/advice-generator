@@ -57,7 +57,7 @@ padding: 15px;
 `
 
 const Home = () => {
-  const [quote, setQuote] = useState()
+  const [quote, setQuote] = useState("")
   const [quoteNo, setQuoteNo] = useState()
 
   const getAdvice = useCallback( async () =>{
@@ -74,7 +74,7 @@ const Home = () => {
    useEffect(() => {
     const intervalId = setInterval(() => {
       getAdvice();
-    }, 3000);
+    }, 5000);
 
     return () => {
       clearInterval(intervalId);
@@ -111,7 +111,7 @@ const Home = () => {
     </Advicenumber>
     <Advicetext
     variants={quoteAnimate}>
-    "{quote}"
+    "{quote == "" ? Loading.. : quote}"
     </Advicetext>
     
     <img style={{position:"absolute", bottom:"55px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />

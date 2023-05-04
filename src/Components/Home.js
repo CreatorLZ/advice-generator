@@ -111,7 +111,7 @@ const Home = () => {
     </Advicenumber>
     <Advicetext
     variants={quoteAnimate}>
-    {quotes ? <p>"{quotes}"</p> : <p>"Loading..."</p>}
+    {quote ? <p>"{quote}"</p> : <p>"Loading..."</p>}
     </Advicetext>
     
     <img style={{position:"absolute", bottom:"55px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />

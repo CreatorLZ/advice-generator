@@ -74,7 +74,7 @@ const Home = () => {
    useEffect(() => {
     const intervalId = setInterval(() => {
       getAdvice();
-    }, 5000);
+    }, 9000);
 
     return () => {
       clearInterval(intervalId);

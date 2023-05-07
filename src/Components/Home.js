@@ -114,7 +114,7 @@ const Home = () => {
     {quote ? <p>"{quote}"</p> : <p>"Loading..."</p>}
     </Advicetext>
     
-    <img style={{position:"absolute", bottom:"55px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />
+    <img style={{position:"absolute", bottom:"55px",width:"80%",paddingTop:"20px"}} src='./images/pattern-divider-desktop.svg' alt='divider' />
     <Dice style={{
     position:"absolute",
     bottom:"-25px",  

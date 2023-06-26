@@ -78,10 +78,15 @@ const Home = () => {
     }
   },[])
 
-  useEffect(()=>{
-   
-    getAdvice();
-  })
+   useEffect(() => {
+    const intervalId = setInterval(() => {
+      getAdvice();
+    }, 9000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [getAdvice])
 
   const quoteAnimate = {
     offscreen:{ scale:1,opacity:0 },
@@ -137,10 +142,14 @@ const Home = () => {
     </Advicenumber>
     <Advicetext
     variants={quoteAnimate}>
-    "{quote}"
+    {quote ? <p>"{quote}"</p> : <p>"Loading..."</p>}
     </Advicetext>
     
+<<<<<<< HEAD
     <img style={{marginTop:"40px",marginBottom:"30px",width:"80%",}} src='./images/pattern-divider-desktop.svg' alt='divider' />
+=======
+    <img style={{width:"80%",paddingTop:"20px"}} src='./images/pattern-divider-desktop.svg' alt='divider' />
+>>>>>>> 44414775e49cbaf59038ee0379ccea19e64f5854
     <Dice style={{
     position:"absolute",
     bottom:"-25px",  

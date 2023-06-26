@@ -16,9 +16,8 @@ flex-direction: column;
 const Advicecard= styled.div`
 background-color: hsl(217, 19%, 24%);
 max-width:500px;
-min-width: 300px;
+min-width: 150px;
 min-height: 300px;
-max-height: 600px;
 border-radius: 15px;
 display: flex;
 align-items: center;
@@ -32,10 +31,10 @@ transition: all 1.5s ease-in-out;
   box-shadow: 0px 0px 27px 0px hsl(150, 100%, 66%);
 }
 `
-const Advicenumber = styled.span`
+const Advicenumber = styled(motion.span)`
 margin-top: 50px;
 color: hsl(150, 100%, 66%);
-font-size: 12px;
+font-size: 11px;
 letter-spacing: 2px;
 `
 
@@ -112,6 +111,18 @@ const Home = () => {
     },
   }
 
+  const noAnimate = {
+    offscreen:{opacity:0},
+    onscreen:{
+      opacity: 1,
+      transition:{
+        type:"tween",
+        duration:3.5,
+        repeat:Infinity
+      }
+    },
+  }
+
   
   return (
     <Container
@@ -121,7 +132,7 @@ const Home = () => {
     transition={{staggerChildren:0.2}}
    >
         <Advicecard>
-    <Advicenumber>
+    <Advicenumber variants={noAnimate}>
   ADVICE # {quoteNo}
     </Advicenumber>
     <Advicetext
@@ -135,7 +146,7 @@ const Home = () => {
     bottom:"-25px",  
     borderRadius:"50%"
  
-    }}  onClick={getAdvice}  src='./images/icon-dice.svg' alt='dice' />
+    }}   onClick={getAdvice}  src='./images/icon-dice.svg' alt='dice' />
         </Advicecard>
         <motion.span variants={pAnimate} style={{color:"hsl(150, 100%, 66%)", marginTop:"50px", fontWeight:"800", fontSize:"10px"}}>By CreatorLZ</motion.span>
     </Container>
